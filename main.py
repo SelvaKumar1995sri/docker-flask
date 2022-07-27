@@ -15,10 +15,8 @@ app=Flask(__name__)
 @app.route('/addcar',methods=['post'])
 def add_car():
     try:
-        print("ÏN")
         db = get_db()
         val=request.get_json()
-        print(val)
         db['cars'].insert_one(val)
 
         return "Added successfully"
