@@ -1,0 +1,21 @@
+version: '3'
+services:
+  flask:
+    build: .
+    command: python -u main.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+  db:
+    image: mongo:latest
+    hostname: demo_mongodb
+    environment:
+      - MONGO_INITDB_DATABASE=cars_db
+      - MONGO_INITDB_ROOT_USERNAME=cars
+      - MONGO_INITDB_ROOT_PASSWORD=carpass
+    ports:
+      - 27017:27017
+

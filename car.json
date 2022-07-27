@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Honda",
+        "model": "city"
+    },
+    {
+        "id": 2,
+        "name": "Hundai",
+        "model": "i20"
+    },
+    {
+        "id": 3,
+        "name": "Tata",
+        "model": "harier"
+    }
+]
